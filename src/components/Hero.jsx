@@ -8,10 +8,12 @@ const Hero = () => {
             <nav className="flex justify-between
             items-center w-full mb-10 pt-3">
                 <img src={logo} alt="logo"
-                    className='w-28 object-contain' />
+                    className='object-contain'
+                    width={200} />
+
 
                 <button type='button'
-                    onClick={() => window.open()}
+                    onClick={() => window.open('https://github.com/sreeram3015')}
                     className='black_btn'>
                     Github
                 </button>
@@ -19,15 +21,15 @@ const Hero = () => {
 
 
             <h1 className="head_text">
-                Summarize Articles with <br className='max-md:hidden' />
-                <span className="orange_gradient">
-                    Open AI GPT-4
+                <span className="text-[#BAE8E8]">
+                    Wisdara
                 </span>
+                <br className='max-md:hidden' />
+                Effortlessly summarizes articles with advanced capabilities.
             </h1>
 
             <h2 className="desc">
-                Simplify your reading with Summize, an open-source article summarizer
-                that transforms lengthy articles into clear and concise summaries
+                Ease your reading with Summize, an open-source summarizer crafting clear, concise summaries from lengthy articles.
             </h2>
         </header>
     )

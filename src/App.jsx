@@ -5,10 +5,8 @@ import './App.css'
 
 const App = () => {
     return (
-        <main>
-            <div className="main">
-                <div className="gradient" />
-            </div>
+        <main className="bg-white">
+            
 
 
             <div className="app">
