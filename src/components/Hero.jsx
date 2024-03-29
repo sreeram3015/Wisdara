@@ -29,7 +29,7 @@ const Hero = () => {
             </h1>
 
             <h2 className="desc">
-                Ease your reading with Summize, an open-source summarizer crafting clear, concise summaries from lengthy articles.
+                Ease your reading with Wisdara, an open-source summarizer crafting clear, concise summaries from lengthy articles.
             </h2>
         </header>
     )
