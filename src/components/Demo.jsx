@@ -67,14 +67,11 @@ const Demo = () => {
         localStorage.removeItem('articles'); // Clear the history from localStorage
     };
 
-
-
     return (
         <section className="mt-16 w-full max-w-xl">
             <div className="flex flex-col w-full gap-2">
                 <form className="relative flex justify-center items-center" onSubmit={handleSubmit}>
                     <img src={linkIcon} alt="link_icon" className="absolute left-0 my-2 ml-3 w-5" />
-
                     <input
                         type="url"
                         placeholder="Enter your URL"
@@ -88,18 +85,17 @@ const Demo = () => {
                         required
                         className="url_input peer"
                     />
-
                     <button type="submit" className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700">
                         ↵
                     </button>
                 </form>
 
-                <button type='button'
+                <button
+                    type='button'
                     onClick={handleClearHistory}
-                    className='black_btn font-bold'>
+                    className='bg-jagged-ice-700 text-white py-2 px-4 rounded-lg shadow-md hover:bg-jagged-ice-800 transition duration-300'>
                     Clear History
                 </button>
-
 
                 <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">
                     {allArticles.map((item, index) => (
@@ -108,12 +104,9 @@ const Demo = () => {
                             className="link_card">
                             <div className="copy_btn">
                                 <img src={copy} alt="copy_icon"
-                                    className="w-[40%] h-[40%]
-                                object-contain" />
+                                    className="w-[40%] h-[40%] object-contain" />
                             </div>
-
-                            <p className="flex-1 font-satoshi text-[#15a5a5]
-                            font-medium text-sm truncate">
+                            <p className="flex-1 font-satoshi text-jagged-ice-500 font-medium text-sm truncate">
                                 {item.url}
                             </p>
                         </div>
@@ -121,36 +114,31 @@ const Demo = () => {
                 </div>
             </div>
 
-
-
             <div className="my-10 max-w-full flex justify-center items-center">
                 {isFetching ? (
                     <img src={loader} alt="loader" className="w-20 h-20 object-contain" />
                 ) : error ? (
                     <p className="font-inter font-bold text-black text-center">
                         An unexpected error occurred! <br />
-
-                        <span className="font-satoshi font-normal text-[hsl(248,19%,30%)]">
+                        <span className="font-satoshi font-normal text-jagged-ice-700">
                             {error?.data?.error}
                         </span>
                     </p>
                 ) : (
                     article.summary && (
                         <div className="flex flex-col gap-3">
-                            <h2 className="font-satoshi font-bold text-gray-600 text-xl">
-                                Article <span className="custom_blue_gradient">Summary</span>
+                            <h2 className="font-satoshi font-bold text-jagged-ice-700 text-xl">
+                                Article <span className="text-jagged-ice-500">Summary</span>
                             </h2>
-
                             <div className="summary_box">
-                                <p className="font-inter font-medium
-                                text-sm text-[hsl(248,19%,30%)]">{article.summary}</p>
+                                <p className="font-inter font-medium text-sm text-jagged-ice-700">
+                                    {article.summary}
+                                </p>
                             </div>
                         </div>
                     )
                 )}
             </div>
-
-
         </section >
     );
 };
